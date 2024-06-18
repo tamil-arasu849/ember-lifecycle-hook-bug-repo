@@ -1,0 +1,8 @@
+<p>willDestroyCalls: {{this.willDestroyCalls}}</p>
+<button {{on "click" this.toggleChild}}>Toggle child</button>
+
+{{#if this.showChild}}
+	<Child
+		@incrementWillDestroy={{this.incrementWillDestroy}}
+	/>
+{{/if}}
